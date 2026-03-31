@@ -15,3 +15,4 @@ def record_test(case_id, method, url, request_body, response_body, expected, act
         "actual": actual,
         "result": "✅ Pass" if passed else "❌ Fail"
     })
+

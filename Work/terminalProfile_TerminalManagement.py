@@ -2,6 +2,7 @@ import requests
 import urllib3
 import sys
 import os
+sys.path.append ("D:/ClaudeAI/learing_with_AI")
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -12,9 +13,7 @@ BASE_URL = "https://172.235.199.28:9248/realms/touchpoint/protocol/openid-connec
 
 def login_keycloak():
     headers = {
-    # "User-Agent": "PostmanRuntime/7.51.1",
     "Accept": "*/*",
-    # "Postman-Token": "6049e866-7351-468e-939b-c08007169c34",
     "Host": "172.235.199.28:9248",
     "Accept-Encoding": "gzip, deflate, br",
     "Connection": "keep-alive",
@@ -40,6 +39,9 @@ def login_keycloak():
     # response = requests.post("xxx", headers=headers)
 
     # print (response.json())
+    global access_token
+    global id_token
+    
     access_token = response.json()["access_token"]
     id_token = response.json()["id_token"]
-    print (f"access token = {access_token} \nid token = {id_token}")
+    # print (f"access token = {access_token} \nid token = {id_token}")

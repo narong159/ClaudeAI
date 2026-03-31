@@ -1,7 +1,9 @@
 import json
 import helpers_upgrade
-
-def generate_report(filename="report.html"):
+from datetime import datetime
+date_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+def generate_report(filename=(f"report_{date_time}.html")):
+    now = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
     rows = ""
     for test in helpers_upgrade.results:
         row_color = "#ffcccc" if test['result'] == "❌ Fail" else ""
@@ -26,7 +28,8 @@ def generate_report(filename="report.html"):
     html = f"""
     <html>
         <head>
-            <title>API Test Report</title>
+            <h2>API Test Report</h2>
+            <p style="color: gray; font-size: 14px;">Generated: {now}</p>
             <style>
                 body {{ font-family: Arial; padding: 20px; }}
                 table {{ border-collapse: collapse; width: 100%; table-layout: fixed; }}
@@ -47,7 +50,6 @@ def generate_report(filename="report.html"):
             </style>
         </head>
         <body>
-            <h2>API Test Report</h2>
             <div style="margin-bottom: 20px;">
                 <span style="background:#4CAF50; color:white; padding:8px 15px; border-radius:5px; margin-right:10px;">
                     Total: {total}

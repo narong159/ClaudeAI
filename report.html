@@ -1,0 +1,83 @@
+
+    <html>
+        <head>
+            <h2>API Test Report</h2>
+            <p style="color: gray; font-size: 14px;">Generated: 2026/03/30 15:56:26</p>
+            <style>
+                body { font-family: Arial; padding: 20px; }
+                table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+                th { background-color: #4CAF50; color: white; padding: 10px; }
+                td { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+                tr:nth-child(even) { background-color: #f2f2f2; }
+                pre {  margin: 0; font-size: 12px; white-space: pre-wrap; word-break: break-all;}
+                th:nth-child(1), td:nth-child(1) { width: 40px; }
+                th:nth-child(2), td:nth-child(2) { width: 60px; }
+                th:nth-child(3), td:nth-child(3) { width: 200px; word-break: break-all; }
+                th:nth-child(4), td:nth-child(4) { width: 250px; }
+                th:nth-child(5), td:nth-child(5) { width: 40px; }
+                th:nth-child(6), td:nth-child(6) { width: 40px; }
+                th:nth-child(7), td:nth-child(7) { width: 400px; }
+                th:nth-child(8), td:nth-child(8) { width: 80px; }
+                th:nth-child(9), td:nth-child(9) { width: 80px; }
+                th:nth-child(10), td:nth-child(10) { width: 60px; }
+            </style>
+        </head>
+        <body>
+            <div style="margin-bottom: 20px;">
+                <span style="background:#4CAF50; color:white; padding:8px 15px; border-radius:5px; margin-right:10px;">
+                    Total: 1
+                </span>
+                <span style="background:#2196F3; color:white; padding:8px 15px; border-radius:5px; margin-right:10px;">
+                    ✅ Passed: 1
+                </span>
+                <span style="background:#f44336; color:white; padding:8px 15px; border-radius:5px;">
+                    ❌ Failed: 0
+                </span>
+            </div>
+            <table>
+                <tr>
+                    <th>CaseID</th>
+                    <th>Method</th>
+                    <th>URL</th>
+                    <th>Request</th>
+                    <th>Status</th>
+                    <th>Time</th>
+                    <th>Response</th>
+                    <th>Expected</th>
+                    <th>Actual</th>
+                    <th>Result</th>
+                </tr>
+                
+        <tr style="background-color: ;">
+            <td>TC001</td>
+            <td>POST</td>
+            <td>https://172.235.199.28:9248/realms/touchpoint/protocol/openid-connect/token/post</td>
+            <td><pre>{
+  "username": "testuser@email.com",
+  "password": "1234",
+  "client_id": "sad-frontend",
+  "grant_type": "password",
+  "scope": "openid api-terminal-profile-2j"
+}</pre></td>
+            <td>200</td>
+            <td>0.195</td>
+            <td><pre>{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuRHA4NG11VDBiUDVZTFk1eFk4d243RF9EQ0lyMk5nZkVoQnhQRGdfcXJFIn0.eyJleHAiOjE3NzQ4NjEyODcsImlhdCI6MTc3NDg2MDk4NywianRpIjoib25ydHJvOjk5ZWI3ZjRkLTdhMjMtM2VjYi1lZGViLTZjZDRlNjkzOTBlOSIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL3RvdWNocG9pbnQiLCJhdWQiOlsic2FkLWZyb250ZW5kIiwiYXBpLWhvbnlha3Vjb25ueWFrdSIsInRvdWNocG9pbnQtYXBpIiwiYXBpLWZmcHJvdmlkZXIiLCJhcGktdGVybWluYWwtcHJvZmlsZS0yaiIsImFwaS10ZXJtaW5hbC1wcm9maWxlIiwiY2VwaC1yZ3ctY2xpZW50IiwiYXBpLXN2aXgtbWFuYWdlciIsImFwaS10cmFuc2Zlci1tYW5hZ2VyIiwiYWNjb3VudCJdLCJzdWIiOiJiYWMyMzQzMS0yYmM4LTRiMGEtOWQxZC1mNzRkMGI3OGRlNzYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzYWQtZnJvbnRlbmQiLCJzaWQiOiIyZmYzMmUyMS1lY2M1LTY2NWItMzlhYi00NGQ3NmM3NmFlNTYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6MTI5OSIsImh0dHA6Ly9sb2NhbGhvc3Q6NTc1NyIsImh0dHA6Ly9sb2NhbGhvc3Q6NzExNiIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsImh0dHBzOi8vbG9jYWxob3N0OjUwODIiLCJodHRwOi8vbG9jYWxob3N0OjUxNzMiLCJodHRwczovL3VhdC1hdXRoLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cDovLzE3Mi4yMzUuMTk5LjI4Ojk0NDYiLCJodHRwczovL2xvY2FsaG9zdDo3MTIzIiwiaHR0cDovLzE3Mi4yMzUuMTk5LjI4Ojk0NDUiLCJodHRwczovL2xvY2FsaG9zdDo3Mjg5IiwiLyoiLCJodHRwczovL2xvY2FsaG9zdDo3MDA0IiwiaHR0cDovLzE3Mi4yMzUuMTk5LjI4OjkzNDMiLCJodHRwOi8vMTcyLjIzNS4xOTkuMjg6OTQ0MSIsImh0dHA6Ly9sb2NhbGhvc3Q6NTIwMiIsImh0dHA6Ly9sb2NhbGhvc3Q6MzAwOSIsImh0dHBzOi8vbG9jYWxob3N0OjcxOTUiLCJodHRwczovL2xvY2FsaG9zdDo3MjUxIiwiaHR0cHM6Ly8xNzIuMjM1LjE5OS4yODo5MjQ3IiwiaHR0cHM6Ly8xNzIuMjM1LjE5OS4yODo5NDQxIiwiaHR0cHM6Ly91YXQuc29va3Nhbm9ubGluZS5jb20iLCIqIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIiwiaHR0cHM6Ly8xNzIuMjM1LjE5OS4yODo5NDQwIiwiaHR0cHM6Ly8xNzIuMjM1LjE5OS4yODo5MjQyIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAxNCIsImh0dHBzOi8vbG9jYWxob3N0OjcwNTkiLCJodHRwczovL3VhdC1zYWQuc29va3Nhbm9ubGluZS5jb20iLCJodHRwczovL2xvY2FsaG9zdDo3MTE2IiwiaHR0cHM6Ly8xNzIuMjM1LjIwNS4yNTo2NTAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy10b3VjaHBvaW50Il19LCJyZXNvdXJjZV9hY2Nlc3MiOnsic2FkLWZyb250ZW5kIjp7InJvbGVzIjpbInNhZC1mcm9udC1hZG1pbiJdfSwiYXBpLXRlcm1pbmFsLXByb2ZpbGUtMmoiOnsicm9sZXMiOlsidGVybWluYWwtcHJvZmlsZTpwb3N0IiwidGVybWluYWwtcHJvZmlsZTpsaXN0IiwidGVybWluYWwtcHJvZmlsZTpnZXQiXX0sImFwaS10ZXJtaW5hbC1wcm9maWxlIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJjZXBoLXJndy1jbGllbnQiOnsicm9sZXMiOlsiY29udHJpYnV0b3IiLCJtYW5hZ2VyIiwiYWRtaW4iLCJ2aWV3LW9ubHkiLCJvcGVyYXRvciJdfSwiYXBpLXN2aXgtbWFuYWdlciI6eyJyb2xlcyI6WyJhcHBwb3J0YWwtY2FwYWJpbGl0eTptYW5hZ2UtZW5kcG9pbnQtc2VjcmV0IiwidGVuYW50OmNyZWF0ZSIsImFwcHBvcnRhbC1jYXBhYmlsaXR5Om1hbmFnZS1lbmRwb2ludCIsInRlbmFudDpkZWxldGUiLCJhcHBwb3J0YWwtY2FwYWJpbGl0eTp2aWV3LWJhc2UiLCJhcHBwb3J0YWwtY2FwYWJpbGl0eTptYW5hZ2UtdHJhbnNmb3JtYXRpb25zIiwiYXBwcG9ydGFsLWNhcGFiaWxpdHk6dmlldy1lbmRwb2ludHNlY3JldCIsImFwcHBvcnRhbC1jYXBhYmlsaXR5OmNyZWF0ZS1hdHRlbXB0cyIsInRlbmFudDp1cGRhdGUiLCJ0ZW5hbnQ6Z2V0Il19LCJhcGktdHJhbnNmZXItbWFuYWdlciI6eyJyb2xlcyI6WyJ0cmFuc2Zlci1pbnN0cnVjdGlvbjpyZWFkIiwidHJhbnNmZXItaW5zdHJ1Y3Rpb246c3RhcnQiLCJ0cmFuc2Zlci1pbnN0cnVjdGlvbjp1cGRhdGUiLCJ0cmFuc2Zlci1pbnN0cnVjdGlvbjpsaXN0IiwidHJhbnNmZXItaW5zdHJ1Y3Rpb246Y3JlYXRlIiwidGVybWluYWwtc3luYzpzeW5jMmoiLCJ0cmFuc2Zlci1pbnN0cnVjdGlvbjphZG1pbiIsImZpbGUtZGV0YWlsOnJlYWQiLCJ0cmFuc2Zlci1oaXN0b3J5OnJlYWQiLCJmaWxlLWRldGFpbDp1cGRhdGUiLCJwcm9ncmVzcy1yZXBvcnQ6YmF0Y2giLCJ0ZXJtaW5hbC1ldmVudDpzdGFydCIsImhwZHQ6dXBkYXRlIiwidHJhbnNmZXItaW5zdHJ1Y3Rpb246ZGVsZXRlIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBhcGktdGVybWluYWwtcHJvZmlsZS0yaiBwcm9maWxlIG9yZ2FuaXphdGlvbiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwib3JnYW5pemF0aW9uIjpbImhpdGFjaGktY2guY28udGgiXSwibmFtZSI6InRlc3QgdGVzdCIsImNlcGhfY2xpZW50X3JvbGUiOlsiY29udHJpYnV0b3IiLCJtYW5hZ2VyIiwiYWRtaW4iLCJ2aWV3LW9ubHkiLCJvcGVyYXRvciJdLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0ZXN0dXNlckBlbWFpbC5jb20iLCJnaXZlbl9uYW1lIjoidGVzdCIsImZhbWlseV9uYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdHVzZXJAZW1haWwuY29tIn0.XTr2QDiKR4vzhFDZxn3JbOqlaajofD6tdYqGf2soYaaUgMZz87fkP00iHPgU6Yr8XrE7N1Hp9nBlppKY0KmTo6oGYHkbZE80ky8va7bFRLu4QbPQwScZbRIuc2K5JdOPiDcOcGTIdlTw5Fjj8ZYV64rYhknlNr_0xEiWEHlZmj710RNDz9qga3scq_6U4e8Qn3mQa_WxPP91gj2zi2SoySWbWxqfpjJCJyP4c2WCzumHOGhLwg369lMoDc4ixPTaNgyAJwk02TUfjJruH7wryp11JY9AbrRxjlSGux9Vztg2hBGcKx9uQZouOoGc4U4-9KGn2JfjQw2rwsP6zP6D3w",
+  "expires_in": 300,
+  "refresh_expires_in": 1800,
+  "refresh_token": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJhMjNlMDkzMC05NjYxLTQ4NzUtYWMxYi0zNzQ0YjkwNGE4YTcifQ.eyJleHAiOjE3NzQ4NjI3ODcsImlhdCI6MTc3NDg2MDk4NywianRpIjoiNjk4MjgzNTAtNjE2Ni04MTBlLTFhYmItMTI1M2FjZTIzNzcxIiwiaXNzIjoiaHR0cHM6Ly91YXQtYXV0aC5zb29rc2Fub25saW5lLmNvbS9yZWFsbXMvdG91Y2hwb2ludCIsImF1ZCI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL3RvdWNocG9pbnQiLCJzdWIiOiJiYWMyMzQzMS0yYmM4LTRiMGEtOWQxZC1mNzRkMGI3OGRlNzYiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoic2FkLWZyb250ZW5kIiwic2lkIjoiMmZmMzJlMjEtZWNjNS02NjViLTM5YWItNDRkNzZjNzZhZTU2Iiwic2NvcGUiOiJvcGVuaWQgZW1haWwgYXBpLXRlcm1pbmFsLXByb2ZpbGUtMmogcm9sZXMgYWNyIGJhc2ljIHdlYi1vcmlnaW5zIHByb2ZpbGUgb3JnYW5pemF0aW9uIn0.MIH9w8FukJ06q1woRh91U3Vo2lB_8Q2Qtof0Sc8wRIJ5E0rO5xdvEhRYfDBmybJhByqn5OYe6WEbLd0ZmXeoGA",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuRHA4NG11VDBiUDVZTFk1eFk4d243RF9EQ0lyMk5nZkVoQnhQRGdfcXJFIn0.eyJleHAiOjE3NzQ4NjEyODcsImlhdCI6MTc3NDg2MDk4NywianRpIjoiNzViODg5M2EtNmFmNi02NzkwLTFkNmItMTY3YjgxMmIwNDRhIiwiaXNzIjoiaHR0cHM6Ly91YXQtYXV0aC5zb29rc2Fub25saW5lLmNvbS9yZWFsbXMvdG91Y2hwb2ludCIsImF1ZCI6InNhZC1mcm9udGVuZCIsInN1YiI6ImJhYzIzNDMxLTJiYzgtNGIwYS05ZDFkLWY3NGQwYjc4ZGU3NiIsInR5cCI6IklEIiwiYXpwIjoic2FkLWZyb250ZW5kIiwic2lkIjoiMmZmMzJlMjEtZWNjNS02NjViLTM5YWItNDRkNzZjNzZhZTU2IiwiYXRfaGFzaCI6Imd4OHNxY0ZDYlVnczA0azhfbkNJdFEiLCJhY3IiOiIxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJvcmdhbml6YXRpb24iOlsiaGl0YWNoaS1jaC5jby50aCJdLCJuYW1lIjoidGVzdCB0ZXN0IiwiY2VwaF9jbGllbnRfcm9sZSI6WyJjb250cmlidXRvciIsIm1hbmFnZXIiLCJhZG1pbiIsInZpZXctb25seSIsIm9wZXJhdG9yIl0sInByZWZlcnJlZF91c2VybmFtZSI6InRlc3R1c2VyQGVtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0dXNlckBlbWFpbC5jb20ifQ.YMOEh-wwS-U5RLfwK8e_VcmMJUE0KtazYxjo2fFtFB7Nyl-x5VUxVJt4nJrF8H5-rBQaTGN87v1SZvBXMZX8okErG1OwoW7EfpCaOO3Go1CtYesRUwv46qom6oOf1PMFDNv4seOrrqnQhxopA2BvHnYfbt7yEztCP-yca-6pXGU2xHJ3UufbEpJilGjyMuhQs9DD_oJdmbh46V67keOk3Is9LRENwlpkvV-tYPA_5iq-CpuHBa7rRP9_CoF5YkLFZSoCnJc3eOmosrVMgvF857gsQ-Ku8TXupLlEqLBdyN46EBpZiKfX4AJ07-Fo4DhgF13bEmAVsDs1LSF_wTl7xw",
+  "not-before-policy": 1765179132,
+  "session_state": "2ff32e21-ecc5-665b-39ab-44d76c76ae56",
+  "scope": "openid email api-terminal-profile-2j profile organization"
+}</pre></td>
+            <td>200</td>
+            <td>200</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+            </table>
+        </body>
+    </html>
+    

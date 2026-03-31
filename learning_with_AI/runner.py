@@ -1,13 +1,14 @@
 import os
+import sys
+sys.path.append ("D:/ClaudeAI/Work")
 from tests.test_login import test_login_valid, test_login_wrong_password
-from terminalProfile_TerminalManagement import login_keycloak
+import terminalProfile_TerminalManagement
 from report import generate_report
 
 #Run all tests
 # test_login_valid()
 # test_login_wrong_password()
-login_keycloak()
+terminalProfile_TerminalManagement.login_keycloak()
 
 # Generate report
 generate_report()
-print(os.getcwd())  # prints current working directory
