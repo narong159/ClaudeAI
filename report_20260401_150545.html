@@ -1,0 +1,92 @@
+
+    <html>
+        <head>
+            <h2>API Test Report</h2>
+            <p style="color: gray; font-size: 14px;">Generated: 2026/04/01 15:05:45</p>
+            <style>
+                body { font-family: Arial; padding: 20px; }
+                table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+                th { background-color: #4CAF50; color: white; padding: 10px; }
+                td { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+                tr:nth-child(even) { background-color: #f2f2f2; }
+                pre {  margin: 0; font-size: 12px; white-space: pre-wrap; word-break: break-all;}
+                th:nth-child(1), td:nth-child(1) { width: 40px; }
+                th:nth-child(2), td:nth-child(2) { width: 60px; }
+                th:nth-child(3), td:nth-child(3) { width: 200px; word-break: break-all; }
+                th:nth-child(4), td:nth-child(4) { width: 250px; }
+                th:nth-child(5), td:nth-child(5) { width: 250px; }
+                th:nth-child(7), td:nth-child(7) { width: 40px; }
+                th:nth-child(8), td:nth-child(8) { width: 40px; }
+                th:nth-child(9), td:nth-child(9) { width: 400px; }
+                th:nth-child(10), td:nth-child(10) { width: 80px; }
+                th:nth-child(11), td:nth-child(11) { width: 80px; }
+                th:nth-child(12), td:nth-child(12) { width: 60px; }
+            </style>
+        </head>
+        <body>
+            <div style="margin-bottom: 20px;">
+                <span style="background:#4CAF50; color:white; padding:8px 15px; border-radius:5px; margin-right:10px;">
+                    Total: 1
+                </span>
+                <span style="background:#2196F3; color:white; padding:8px 15px; border-radius:5px; margin-right:10px;">
+                    ✅ Passed: 1
+                </span>
+                <span style="background:#f44336; color:white; padding:8px 15px; border-radius:5px;">
+                    ❌ Failed: 0
+                </span>
+            </div>
+            <table>
+                <tr>
+                    <th>CaseID</th>
+                    <th>Method</th>
+                    <th>URL</th>
+                    <th>Request Header</th>
+                    <th>Request Body</th>
+                    <th>Time</th>
+                    <th>Expected_response_code</th>
+                    <th>Response</th>
+                    <th>Expected</th>
+                    <th>http_Actual</th>
+                    <th>http_Result</th>
+                </tr>
+                
+        <tr style="background-color: ;">
+            <td>TC001</td>
+            <td>GET</td>
+            <td>https://uat-auth.sooksanonline.com/realms/mad/protocol/openid-connect/token</td>
+            <td><pre>{
+  "Accept": "*/*",
+  "Authorization": "Basic bWFkLXN5c3RlbS1zZXR0aW5nOmFncFNBYTUxS0lJUTR6eW9EamdQZ25GUUNFbmhWOHJ3",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/x-www-form-urlencoded"
+}</pre></td>
+            <td><pre>{
+  "grant_type": "password",
+  "code": "4d61f5f2-e156-3ef8-6426-b950c4fa1fd0.073981a0-7b2f-c297-0c9e-ef8f5f67fefa.f8f8ccef-0163-4b09-8dd8-ad64b14b63fb",
+  "redirect_uri": "https://oauth.pstmn.io/v1/callback",
+  "code_verifier": "alAk4Cbi1gWazrRxxsS9psd1QT1xwIDJlN01V7OMYsE",
+  "username": "abc_test",
+  "password": "12345",
+  "scope": "mad-system-setting"
+}</pre></td>
+            <td>0.216</td>
+            <td></td>
+            <td><pre>{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMzEwNDYsImlhdCI6MTc3NTAzMDc0NiwianRpIjoib25ydHJvOjVlNjFhMTE3LTQyOTUtYjFjYi1lNTQ1LWFjMGQwY2I4YTM0NyIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6IjdmN2RkZmQ4LWRjZmEtMTJlNi03NTJhLTQ2NGI5OTBmMWFkZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.LNtFQF-oQK-TvLueFUdS2JCex8rEBLYTXf7iyR94fVUPzD4xjmk1CGo3mPZXg0rfpiqGivbnqXSNFGXYkcWojnOjovq-6zVepFSekkUgavmMiXv6I1UjzlPSidHqC8qgBZiyudUD9a8KUnyr7EJAuBuGRGzZ7d6PR0Gg2X7N7jnCZc3RFO6bWuXSca5_1oXMcsG-ydePjp-ork5VAQ52X5vsdSMGlGE81ka9Vni8dZJL1domGENogysEaKM2UMW1aQ4mwdKi-PjtHren077hhnYSyoh9pz0iusJFDyLIKzsTwmfrbELbq7Y0posrHaJK4NImcROPB3FmV-PC-ACx1A",
+  "expires_in": 300,
+  "refresh_expires_in": 1800,
+  "refresh_token": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3MjA0MTViZC0yNjU1LTRkNDMtYmM3Ny05ZGQ1ODVmZDM0ZDYifQ.eyJleHAiOjE3NzUwMzI1NDYsImlhdCI6MTc3NTAzMDc0NiwianRpIjoiY2IwM2QxY2MtOTQ1Mi1kZDhkLTExNmItMTJhOTRlYjBlMmY5IiwiaXNzIjoiaHR0cHM6Ly91YXQtYXV0aC5zb29rc2Fub25saW5lLmNvbS9yZWFsbXMvbWFkIiwiYXVkIjoiaHR0cHM6Ly91YXQtYXV0aC5zb29rc2Fub25saW5lLmNvbS9yZWFsbXMvbWFkIiwic3ViIjoiNGNkNTM4NzItZGM1NC00N2UyLTgzYjgtZWFmYmQ1ODM2YWQzIiwidHlwIjoiUmVmcmVzaCIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6IjdmN2RkZmQ4LWRjZmEtMTJlNi03NTJhLTQ2NGI5OTBmMWFkZCIsInNjb3BlIjoicHJvZmlsZSBhY3IgbWFkLXRlc3QgYmFzaWMgbWFkLXN5c3RlbS1zZXR0aW5nIHdlYi1vcmlnaW5zIG9yZ2FuaXphdGlvbiByb2xlcyBlbWFpbCBzZXJ2aWNlX2FjY291bnQifQ.9YfVNyyEjwpSkOiInDuQAaptuzkhDV2ju4bqedKLafU5VL921VYN5Zq_n6FIgNzQ8p4ceD7TCmTgz8NDoiFGvQ",
+  "token_type": "Bearer",
+  "not-before-policy": 0,
+  "session_state": "7f7ddfd8-dcfa-12e6-752a-464b990f1add",
+  "scope": "profile organization email"
+}</pre></td>
+            <td>200</td>
+            <td>200</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+            </table>
+        </body>
+    </html>
+    

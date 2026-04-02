@@ -1,0 +1,504 @@
+
+    <html>
+        <head>
+            <h2>API Test Report</h2>
+            <p style="color: gray; font-size: 14px;">Generated: 2026/04/01 13:59:46</p>
+            <style>
+                body { font-family: Arial; padding: 20px; }
+                table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+                th { background-color: #4CAF50; color: white; padding: 10px; }
+                td { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+                tr:nth-child(even) { background-color: #f2f2f2; }
+                pre {  margin: 0; font-size: 12px; white-space: pre-wrap; word-break: break-all;}
+                th:nth-child(1), td:nth-child(1) { width: 40px; }
+                th:nth-child(2), td:nth-child(2) { width: 60px; }
+                th:nth-child(3), td:nth-child(3) { width: 200px; word-break: break-all; }
+                th:nth-child(4), td:nth-child(4) { width: 250px; }
+                th:nth-child(5), td:nth-child(5) { width: 250px; }
+                th:nth-child(6), td:nth-child(6) { width: 40px; }
+                th:nth-child(7), td:nth-child(7) { width: 40px; }
+                th:nth-child(8), td:nth-child(8) { width: 400px; }
+                th:nth-child(9), td:nth-child(9) { width: 80px; }
+                th:nth-child(10), td:nth-child(10) { width: 80px; }
+                th:nth-child(11), td:nth-child(11) { width: 60px; }
+            </style>
+        </head>
+        <body>
+            <div style="margin-bottom: 20px;">
+                <span style="background:#4CAF50; color:white; padding:8px 15px; border-radius:5px; margin-right:10px;">
+                    Total: 13
+                </span>
+                <span style="background:#2196F3; color:white; padding:8px 15px; border-radius:5px; margin-right:10px;">
+                    ✅ Passed: 12
+                </span>
+                <span style="background:#f44336; color:white; padding:8px 15px; border-radius:5px;">
+                    ❌ Failed: 1
+                </span>
+            </div>
+            <table>
+                <tr>
+                    <th>CaseID</th>
+                    <th>Method</th>
+                    <th>URL</th>
+                    <th>Request Header</th>
+                    <th>Request Body</th>
+                    <th>Status</th>
+                    <th>Time</th>
+                    <th>Response</th>
+                    <th>Expected</th>
+                    <th>Actual</th>
+                    <th>Result</th>
+                </tr>
+                
+        <tr style="background-color: ;">
+            <td>TC001</td>
+            <td>GET</td>
+            <td>https://uat-auth.sooksanonline.com/realms/mad/protocol/openid-connect/token</td>
+            <td><pre>{
+  "Accept": "*/*",
+  "Authorization": "Basic bWFkLXN5c3RlbS1zZXR0aW5nOmFncFNBYTUxS0lJUTR6eW9EamdQZ25GUUNFbmhWOHJ3",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/x-www-form-urlencoded"
+}</pre></td>
+            <td><pre>{
+  "grant_type": "password",
+  "code": "4d61f5f2-e156-3ef8-6426-b950c4fa1fd0.073981a0-7b2f-c297-0c9e-ef8f5f67fefa.f8f8ccef-0163-4b09-8dd8-ad64b14b63fb",
+  "redirect_uri": "https://oauth.pstmn.io/v1/callback",
+  "code_verifier": "alAk4Cbi1gWazrRxxsS9psd1QT1xwIDJlN01V7OMYsE",
+  "username": "abc_test",
+  "password": "12345",
+  "scope": "mad-system-setting"
+}</pre></td>
+            <td>200</td>
+            <td>0.268</td>
+            <td><pre>{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA",
+  "expires_in": 299,
+  "refresh_expires_in": 1799,
+  "refresh_token": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3MjA0MTViZC0yNjU1LTRkNDMtYmM3Ny05ZGQ1ODVmZDM0ZDYifQ.eyJleHAiOjE3NzUwMjg1ODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoiYzVlNjIxNTQtNGQ1OC1jZmY5LTdmZWItNDM3MzY3YjVjMGFkIiwiaXNzIjoiaHR0cHM6Ly91YXQtYXV0aC5zb29rc2Fub25saW5lLmNvbS9yZWFsbXMvbWFkIiwiYXVkIjoiaHR0cHM6Ly91YXQtYXV0aC5zb29rc2Fub25saW5lLmNvbS9yZWFsbXMvbWFkIiwic3ViIjoiNGNkNTM4NzItZGM1NC00N2UyLTgzYjgtZWFmYmQ1ODM2YWQzIiwidHlwIjoiUmVmcmVzaCIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsInNjb3BlIjoicHJvZmlsZSBhY3IgbWFkLXRlc3QgYmFzaWMgbWFkLXN5c3RlbS1zZXR0aW5nIHdlYi1vcmlnaW5zIG9yZ2FuaXphdGlvbiByb2xlcyBlbWFpbCBzZXJ2aWNlX2FjY291bnQifQ.j2IvJVMF6RbdTUFHxKW7I9xvvFDkTLQ8mA3WcEV12dwo15c8jShmzQA-xRI17qLQWXEe5zrVUJR10lqJRLoagQ",
+  "token_type": "Bearer",
+  "not-before-policy": 0,
+  "session_state": "eabd3e73-61e1-0a56-1b2d-fc066a0b0e8f",
+  "scope": "profile organization email"
+}</pre></td>
+            <td>200</td>
+            <td>200</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC002</td>
+            <td>GET</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/x-www-form-urlencoded",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>""</pre></td>
+            <td>200</td>
+            <td>0.137</td>
+            <td><pre>{
+  "responseCode": "000000",
+  "message": "Completed",
+  "data": [
+    {
+      "id": "019ce11c-afb5-7aeb-bc11-6319e6017623",
+      "name": "test_25022026_1ew3",
+      "description": "test003",
+      "isactive": true,
+      "cby": "se_admin@hitachi-ch.co.th",
+      "cdate": "2026-03-12T08:14:39.609771Z",
+      "uby": "se_admin@hitachi-ch.co.th",
+      "udate": "2026-03-12T09:04:24.197185Z"
+    },
+    {
+      "id": "019cdac3-0a3d-79a8-8168-6021edac43b9",
+      "name": "TEST-12345",
+      "description": "test_xxx",
+      "isactive": true,
+      "cby": "testuser@email.com",
+      "cdate": "2026-03-11T02:39:01.252908Z",
+      "uby": "se_admin@hitachi-ch.co.th",
+      "udate": "2026-03-13T02:39:35.34328Z"
+    },
+    {
+      "id": "019d47d4-803d-7317-a10d-51dad387bd19",
+      "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgcb",
+      "description": null,
+      "isactive": true,
+      "cby": "abc_test",
+      "cdate": "2026-04-01T06:56:42.12314Z",
+      "uby": "abc_test",
+      "udate": "2026-04-01T06:56:42.12329Z"
+    }
+  ]
+}</pre></td>
+            <td>200</td>
+            <td>200</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC003</td>
+            <td>GET</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes/names</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>""</pre></td>
+            <td>200</td>
+            <td>0.102</td>
+            <td><pre>{
+  "responseCode": "000000",
+  "message": "Completed",
+  "data": [
+    {
+      "id": "019ce11c-afb5-7aeb-bc11-6319e6017623",
+      "name": "test_25022026_1ew3"
+    },
+    {
+      "id": "019cdac3-0a3d-79a8-8168-6021edac43b9",
+      "name": "TEST-12345"
+    },
+    {
+      "id": "019d47d4-803d-7317-a10d-51dad387bd19",
+      "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgcb"
+    }
+  ]
+}</pre></td>
+            <td>200</td>
+            <td>200</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC004</td>
+            <td>POST</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>{
+  "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgc1",
+  "inputaeskey": "bvnropszmchbursjplliazpygtzpxosp",
+  "rsakeysize": 1024,
+  "isactive": true
+}</pre></td>
+            <td>200</td>
+            <td>0.125</td>
+            <td><pre>{
+  "responseCode": "000000",
+  "message": "Completed",
+  "data": {
+    "id": "019d47d7-4098-7b42-981e-9b34b7852d54",
+    "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgc1",
+    "description": null,
+    "encryptedaeskey": "cMQmikk0ZNPWcKUydABykG0/ifsd9GDBZKehMvZrs5Bnzhe4DqOnmjEjkJCipUyD9mC5ZgJ6Ldm96QmvARrTwi2sah8oaPlyxFMc/yqU9IoxS61AgWRCu10DiReWW23iDY4NnQgW3KehwR97pQC73/JuqapKE+6394loSlM3MbU=",
+    "rsakeysize": 1024,
+    "rsaprivatekey": "UEZKVFFVdGxlVlpoYkhWbFBqeE5iMlIxYkhWelBuRmthM05CTmpkSVJHSnVNMmRpTkdwcFkxUmhLMFYyVkdab1NtUkVaMEV3VG5wMFRYTjZNVTR2YUdreldYRmxVamRLUVd4U1lYZHVkVXRZYXl0TGNVRnlLM00ySzNCeVJHeDJSMWRDV0ZGU1F6bGpXV2ROYW5ObWVWUkhVVFUyTjBwT1pEUkpiamh5YVcxSksydHVhMGh5V0UxWVJVaHVRMFpNY0hoaVJqRklLM1pETVcxalMwYzJNa1Z5SzJadFVYaHdkV2hWUzA5M1dEZFVTRlJJWTBGSlZXUkNibFE1Ynl0UGF6MDhMMDF2WkhWc2RYTStQRVY0Y0c5dVpXNTBQa0ZSUVVJOEwwVjRjRzl1Wlc1MFBqeFFQakozTHpaclUwNTRNWHBzY25sSE1GTlRZa0pVVERkdVJVNWtOekJyWWtaSVpFTlRiR012V1hGT1ZtOHJjWGROYjFWNVIzUlJSVlJWV2pCdWIyMTBlbTVSYW5GNWQyeHRUV2xMTVZscFRqVlFZazVITHl0M1BUMDhMMUErUEZFK2VHNTZVelpJT1hOaGRWSjFlbGhaVmt0RFRuY3dPVmh3UldKd1JtNXpNVkpZZDNaM09IZDZRWGxHYUNzM2VFZE1TMUZGVDFZNGVtbFFUVmhrT0ZVNGIwZHlXRE5NVW5GdmVXWkRUbFJTTDNaamN6RkNZWGM5UFR3dlVUNDhSRkErTURaTFpGUmhhbnB4TlRKREwzUkJOVTFqTTFOdlJFbFdWMGxKT0hZMlEwbDVja1UwTURBMVNVOTFSV295UXpKc2QwdExlR05ZZWs1M04yZEpjVGg1Y3poNlVXOVVWa1ZqVkRGT1FsUkpSMU5PUTNnd1JIYzlQVHd2UkZBK1BFUlJQa0poUmxkNmFtVklSMDFWWjBNek16QXZZVEUzY25SaFltaFBRVEo0TVd4c2JrZ3JXRTU0TWl0bWFrSmpZMWRYWVM4ckwwTjFNbFJhWVdkWWJURk5hRGxDTjNwMmNGQjZhbTF6TjFSQk1GRk1iemhOUlhaM1BUMDhMMFJSUGp4SmJuWmxjbk5sVVQ1b1lUVXZLMmxXVkRCV1RrMDNkMmhXYkhFMVRGZDVRekpLTm1SblFXSnVPVXd4UlRGRGVYWk9RM0UxVTFvMmFEWlNSMkprWVZkNVJ6UjNPVE56ZW5WUWVsUjJURlJJUVhnNWFsWTNXVmxLWTBGdGFDdEpkejA5UEM5SmJuWmxjbk5sVVQ0OFJENUNUbUYwTDFaRVpWWk9URWRpVldwSldrZFdZVkUxWVU1aFRuTklSVm8wU2pOelZIVnpNMEk0Y0RBNU1qaG1WMHRJTmpSbWEySlBUVEJwVEZCMWFFaEtXbkp0VW5wWkwxcEpTbE42VkVkYU5VVmthRWd4TVRrNGVESm1lbk42UTBoUWNGWk9kRVJWTWtkbE1tRnNLMkp1YlZweU9VVjJUMGt3TkhReU5qTkxXVzl6TW5vclluUndiMVEzWlZrMmNYTTJValpJYmxwMGVGaE1Sa3BaTjBKcGNVRlVZa0ZZV2tSSU5qQTlQQzlFUGp3dlVsTkJTMlY1Vm1Gc2RXVSs=",
+    "isactive": true,
+    "cby": "abc_test",
+    "cdate": "2026-04-01T06:59:42.3604918Z",
+    "uby": "abc_test",
+    "udate": "2026-04-01T06:59:42.3604981Z"
+  }
+}</pre></td>
+            <td>200</td>
+            <td>200</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC005</td>
+            <td>POST</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>{
+  "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgc2",
+  "inputaeskey": "bvnropszmchbursjplliazpygtzpxosp",
+  "rsakeysize": 2048,
+  "isactive": false
+}</pre></td>
+            <td>200</td>
+            <td>0.516</td>
+            <td><pre>{
+  "responseCode": "000000",
+  "message": "Completed",
+  "data": {
+    "id": "019d47d7-428a-7996-913e-b307b28ff308",
+    "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgc2",
+    "description": null,
+    "encryptedaeskey": "rRyZj+I++80y31i6/FA2rd+U7TGazD4kllQ8nh6IM5EVzLBXs5ps4MeGBMQrP/Gp0Wh+B1Xz2r8rfYUxuOrwJcuy2ru6TLxGQoIN5iHeYPYIF5y0Ulbnewc5bCy7WMQ92evHUoZ5zDi2A7Kqd/oGDqvbx/thiq0UB1jbtajCBZuaI3kVnu6AMClNWKOWEmMqzKxCwZBP9NvsFY1KrtkVx30Hc+4SXD2Bgf51OiF6brHq3gQvlJeQ/7KwQ7NZw5QoM2Jul5wJQfAfFzO2wBpfs5Fszw2AHOjFh8w6yBIE3AJ4j7y557JVWTkR+VAiQJoxy8YgPIzJG5VGoiBO8Xwakg==",
+    "rsakeysize": 2048,
+    "rsaprivatekey": "UEZKVFFVdGxlVlpoYkhWbFBqeE5iMlIxYkhWelBuVktaMXByTkdwRGRWSm5VbWxyT0dOQk1YQlZWVk5EYml0TWMyTkdheTlDYjI5YVNGY3lhbkZuZEVoeksyZHBjRFZaVldKcVRqQm1UREZSTXpGV1lXWXhObEJJYmtVM05rRXpjRkIzVGl0YUt6SnhhRU5wVWxoeWVEbHVRMlJZTWtKS1ZrVnFNMEprY0d4d1VWUkVVRk55TW1GNE9XVnJVMWRWYzFWb2NWcEpaSE5yWjI5M2IzSTVZUzlhY2s5WFJUVnlhRkJLTWtOdmNubzBURXRWZDBJdlJqWlBMMkZqVjFwV2RVVlhXVnB1VkV0S09YRk5VblJ6THpWcmNsUlFNVTR3TlU1QlRXNUlNRTFGWmxNdll6bEpSRnBKZGpkbWNIQlNkalUxYXpaemJFOVlTMmR4UTB0QlF6ZFJOMEUxVUVkQmJ5dFpiMk5wUm01S2JYVnZNVUpxWldKbFEwdG9XWE5WTVRRM1l6SnlSRzVPU1ZGcFJuTnpZVFJoZUVKc1pHdDZWRmxaVDNOaGJIcElZbTl2V0N0YVJrWnZibXgxVEhGMldXeEphakpxVTJGRVdtaGpNMDFWSzAxWFpqQm5hVXhaTkVoNWR6MDlQQzlOYjJSMWJIVnpQanhGZUhCdmJtVnVkRDVCVVVGQ1BDOUZlSEJ2Ym1WdWRENDhVRDQzZGxKRlNFWTJhV05qVkdKd2JHUTBXRGhOTW05a09VY3hWamxvVW1GQ2EyWjRWVzFrUzNsdVlYWjRiMHBXVmxneWJXdGllWFJQVG5Sb1JHSlFlRzlqY0hwNVVsWlVaSFVyT1cxVU4zZHRibWxpUnpOcFZrNWtkbU5wTVhkdFUybEVaMGQxT1dOa1EydFJXVFZvYmtOQlZ6bFRRMmswVm5WeFlVTlZPRU1yYWxWUU0zSnBXRVZQTDNJemRtUk1TM2RhZWswd1RVczRhMGMxU3pkRWNIQklVMU5yTTFGT2NuaGthMFU5UEM5UVBqeFJQbmhqVFdaTVZVZEJlSHBNWkVaa1NGQjBTMnQyYURsa1owMW1WSE5pZFc5T1NYSkhXbU5CYVU5RVRETkhXbTFuU20weGRDdHFSbEJJVW1KV2FuTXJhV3BIYkc1RVpFNUNTV1ZXWjB4NGIzWjRXbUZ3T0ZSTlFVdFZRVEkzVjFCMlkyWmhkVlZDTmpoU01HSnVXR2xOYjBaaU9VSXJPREJ1ZFVoUVFtNUdOWFJUYzJGbWRUVkZTVFIyYmxsUFFpdGFPWFJXTWtKSll5OXpkbGN3UVVoV2RFMHpWbUZuVTNGcVprMTNjejA4TDFFK1BFUlFQbTVHVm5CWWJHOHpNREZGYkVZMU5IZHVaelU0TlhOcVMyTm1lakpEWmxOWE5qSklkVUl2VjFKcWRtaFhUblEyZDBoTVFWcDNPR2hIT1dFdmRtdFZhRWhMVFRoRGEyOXplVGRGYWpoa1V6WlBNSGhLV0dKMGQwRXZOVXRhTHk5WFVUVk1UVXhSWW1VNVFVWTNaazFsY2xkMk56STBUSGR1T0ZSaVVrY3pVMFk1Y1hoaFJtcERWbEV4ZVRsNWR6VnVTWFZoZDFKWlEzbHNOV1pvU1hNMVVWTlJXRnBoZEU4M1NtWlZSVDA4TDBSUVBqeEVVVDVZV1dWS2MwTnhhR3RDVWtSTldGZFpVMVJaVjNvMlZWSjZjVFp4VURBMlkxSmpUU3M0VW1oeGNtbFlNblJwYjFGSFVsTjBhR2R3T1ZoVUsweFdkVkEwWkRWaWNXUk5NbTgyVWtzeVFuZElZV1ZvTW0xVFpHOTBVbTB3YjBwTk5rSkhhMHBUWTFWMlowaHdUa3BHTVRKTlRYSlRiSGhqVVRaU1FpdERZMnQ1TkZWSFRTc3ZWamxCV0ZCMVUyRlVVV1ZWWlRsWFEycHhMMGRXZERaNVYyVk1jemhoY21GdlVIaG5Oemc5UEM5RVVUNDhTVzUyWlhKelpWRStWVk13ZWpoaGFGcEtRMUJsTWpKVmFqSmhhakl4UXl0SlJITnFVaTlpV2pGdmRVRmplV2d2VFVzNWVVSlJWVUZ2VHpGM1l6aG5jblpOYVRSek5uUXhTVTVSU25ScmJrdFdNblpRWTNsT2VtNVpSRVV5YXk5Q2NYUkJVVmhhUkVWVFJWVm1hWEpCU0V4WU1HeElOSEF3UW5ad2FsWkRZemh4YVU1aU5VSkJlazVqTlZCdVMybFFjVkZNVFRaa2R6Y3JkMUpIVTB4cFZuVjFXSGR6UVVwTVUzRTNlVkF2U0hwNlFWY3dQVHd2U1c1MlpYSnpaVkUrUEVRK1RuTkZURU5TZFU5WmRHWlZWVUp1UTBobE5UZDRlWEYzUjBaUWNqZ3lVa280TDNKMmFrcHZNSGRaVVdsVWJFbHRhbmR0Y1VRclJVSkpTV3hVU0Vkc1lUbFdlRVF4T0ZsSVZ5dFBObG95VVV3MlUzTkxVa3BrWlVkUWFIZEhSbVJMV2pkaFpFSlJNRmxCYTBkVmQzUXlNbFl3WmxoaWNrWndUekp3VGxaMGJGazRhamhpWlhKRlNVNUNTM0YwZVVoSWFEWmFVU3RGVjNkRk0yTk5WMWcwVG5OeU1tSnVXSEZxTlc5Rk5qSlJWMmRvYVhWclFsQTBTMlJxU1RRMFRtZExWRzl0VUZoaFptRkZZMlF2V0VoWU4zVktWMlkyYjNkQ0sycDJNV1ZKWm10MFUwTTBZV1ZHY1hBMVlqZFVabkV2UlZGWU1WaHdaWFYwUWs5T1YwVlBaVFJXUm1aVlVqTlphSEpGZVZvMmQyRTNUak40VW5WRGVUQkxZalIyVTJwWU56TkRWMkV2Tm0xeVZWUjBVM0JzWWxSSFFYQlpPVFIwYVhsRmVVSllWVkpRWkhnd1FURkVaMFk0YkVSWlFtOVdNM0JvYjNkUlBUMDhMMFErUEM5U1UwRkxaWGxXWVd4MVpUND0=",
+    "isactive": false,
+    "cby": "abc_test",
+    "cdate": "2026-04-01T06:59:42.8606095Z",
+    "uby": "abc_test",
+    "udate": "2026-04-01T06:59:42.8606162Z"
+  }
+}</pre></td>
+            <td>200</td>
+            <td>200</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC006</td>
+            <td>POST</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>{
+  "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgc3",
+  "inputaeskey": "bvnropszmchbursjplliazpygtzpxosp",
+  "rsakeysize": 3072,
+  "isactive": true
+}</pre></td>
+            <td>200</td>
+            <td>1.503</td>
+            <td><pre>{
+  "responseCode": "000000",
+  "message": "Completed",
+  "data": {
+    "id": "019d47d7-4872-7adc-8e3f-8c51e132218c",
+    "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgc3",
+    "description": null,
+    "encryptedaeskey": "Yt1EofRYex8gda8QnvjiQsdZKVbhCBEeBaOAl84CnqE14ml1hWId1jEMV57+xdfl01fOYECOKYdI/x6Vy3C9X3JG+awnzXFDQh2xsqQRBHHmorxztdBYFvhe/g6i59QgGGO3JyVfQlWZSuYebEo2zPTQjl3p/Vh6tJ+wJq1QEtw1DhvyZx+q1+x07HrefnffbWe38/6EuYmtjQN82wYQ1OCXgGf2gXpAwbgbWY84q5HKzRU282ze12n0d0Rb+96sw+v7l3w+DRKPdi6X4XKbpJfZTMc1iLz8y2LV4bKeAg8aiwx0Z3cRWJ80ylVd+dcV0jMhQzmVdBMpi/6ZswrcLEGLXG8XnU3mJVO1fTrlwtAc3mD07b2Zszd9BGwyh2yHapFIeHCeJQveE4gKXA6lLQvVLWVU7kpwwycglilIPTGmxBzA0mEp26TOrloQkj0dDPqfVzOm0v27jhBpddd0WzxvxgEW5rspIkIgqpLy7gJW+Bcwmk4x8wczZQhB4Ry8",
+    "rsakeysize": 3072,
+    "rsaprivatekey": "UEZKVFFVdGxlVlpoYkhWbFBqeE5iMlIxYkhWelBtNXpjSFZLV2xvNE5sWjZjVkJGTkZaVFNsWTBRbXhpV21rd1psbDJlamh1ZG1zM05FUlBZbk56Vldsdk5rNWxVVlpyWWxGRlZUaHhRMjlEWVdWTVJVWnBPRTR5YlRSWGRHZDZOMlkxVHpSRlFuRkNlWGx4WW5sbFVVTnplVmhrUkRKNWRFTnhhazQ1V0RoMFRGRjVVREUzU1VSVmEzRTJlbGQ1Y3pFNU5qRkpVbTlNVlhkTVduRm9hVmhEZURSYVNrUmFVV3RQVlZOalZFdHVjVU5hTVZOTkszUjFXVWRxWTB4MlNUazFTeXRCZERoNVZtUnBRVE0wTWtWbk5HcEhUekprVkRkTFFqRnFaMFZNU3pGSlpUSllibU5xTUd0dmVDOUVSa0pxV0RWbVJDdFNkRTV5V1d0TVZtNWxTV2xYZW1wemExZHBRVmgwZWxWWWIyNUdTV3AwVFZBd2FGWTNjM0puYzNodFltVlNOMkZTYWpOc01HVjFVaTl5WTJKVVREVTRiVzFXVW1WUk5GaERaU3RJWjNsWlUxTXlNVkV2VlcxUlIyeG1WV3AwZVVOWE1tUTVNazVWTkZwbVpWbENSVzUwYVZkeloweHpUVXAwYzJSWk0xbHZaemhuVTJWdmFYVTFkVTVUZVZjeUwyNHZVelIwU2tKcWRrbHBaM1YxYzIxSkszYzBlbmxsUkZjd1owSlFZMWRpVmxkYWRtZDRWRTQwUzJoclNtSTNSRWxMUm1NeU1uaEVWSHBWYVd0MVowSjRPVWxJV1VzM2FGVTBNVzlOWWs0MGRrODBTV1F6VVhaMllWZFpjaXRDWjJwT09WazFhSE5PVTJ3emRHdExhekU1UTFSR1pXRTBOMWhvUmt4MmFuRjZlWGxETlU4eFUyMXVTa2wzVEU5cVBDOU5iMlIxYkhWelBqeEZlSEJ2Ym1WdWRENUJVVUZDUEM5RmVIQnZibVZ1ZEQ0OFVENHpWSGwxVUU5cE1qaHViVTExV1ZseFVsUjNUVEJ4TldJdlFtSmxlVzF5Vm5wRVptRTJPV1kwV0hJdlMxbDFTazlKY0cxT1VVNUpURVoxYUdKNllVVmhXVlpOWWtrM1MyUlJRM3BwWmt4aVUweHNSWGxJWWxwb1NXVldPVFUxWWpGNFlVTllTRzVNTUN0VU9YQkhjMlpoTVdnMWFXdFlUbTlCV1ZGVWVHdEliQzk1Y2xRMGRGTjZXRXBpU2xod1JuSlNSRXBVSzNacGJuUjNOMVkzV0hKSVVsQlNTVzVwUVUxYVJ6WjRjRmw1UWpOVFExUnlWMDVxVTFoSWRFUlZRa2xuYUZSeU4xVTBXRlJLV0V0V0wwSXpNRTVIVFM4NGRUa3pWRUY1VW5KRldVUmxOVE5MTm5ST2FGQlJObWd5ZDBKS1ptWk5SbEU1TldkcFJrbGhja3hTUEM5UVBqeFJQblEzTTFWeVNtcGplRWRTZFdzcmR6SnFaVVl5Y1dNdlZqWlhLek54VlUxME1WWnZkRXRzVUhodWFUUjRZMWRvZEhwUVYwcHBhRGN3THpKRFNYVTJjemhEZUhndlRVUkZlRVZoYTJOSFlXcEtjbnBpUkhrMFJXaDBNV05uWjBvNFpUaHJSV3htUjBKUGVtMXBUVFVyUjJGQmRYQjRNR3BrUlZWamVsRkhaMjFRVFUxM05rUlFTQzlUVlhSUlJUSTNWR3B4UmxSck5FOXhORVZZYW1odmVEaHRXR05SVVdsNlkwWXlVbEl6VnpCR1kzcHZTbkJPTWpFM1UyVm9NbGRoYnpoVFYyUkRXbGhLZHpWNU5EUXhjM3AwYkUxbFREQjRVVU5hTmxwSGQyb3dkVFpHV0VOeWMwOTFVRFpTVUdsd1dtWk1ZM1E0VTFkSVZGTkhabE4wVVhvOEwxRStQRVJRUG5CRU1taExSM2x1VEVwc1lVSkllalp6YnpGcVFUWkZXR1p4TVVneGEwODNNWEpFT0c5RGRXdEphM05HY0RaV1ZERnNTR2xWUjFobFpqZEpaVkJUYWtadFl6Qkdhamx1VVRkamVXdHJNblI0TWpWeVFuUjBZMjVuZFN0S1MySXlhbFpaVkdwNU1rbFRVbFowZVROelVGSjZWRmRtWmxaWFRYUTVkR2xvYzA1NlUwcDRNVEJ4WVZCU1ZWSllNa0pJYVRkVGVtcDBZVk5XWkdOMldYVXdWbm95T1daNVpGSnNZblZqSzBoeFJuZEpTMHMwTDJzckx6bDZTVGs0UzFkTk5ITlJSbmhMUzI1YWJVTjRNMjVDVGxWRU56QlNhbEJEYmxWcFlYVnVSbHB4WjJsVmRtRlZZbmc1UzNOUVRFZDJZelpzTDNOeVVraG5OV1E1Y0d0SVUxSThMMFJRUGp4RVVUNTBia0ZYUzNkdVkzRnRVRTlLTjBoNWRWRXlWVGxUWTFsRWNVTlBhVGxJV1ZGSE9EVlRWRE4zVDJzNVJHRkpaRE12Ym05UFFuTmhWMGhNZFU1RFJXOU9Xa1J5TTFSeVMwcE9hUzlxV25SaVp6WnphRVozUm5GSVZEZFBRelJxVFdOV2R6STBWM0poUm1sUmVtMVhOV0l4YUUwcmEwWkZXWEl6T0hsMFJrTXhTbkl2YjFnMllVdG1RaTlrZG0xMGRpOHdlVGMzTDFGNFVFeHJRVEp0WmtsRlFscDZhVEU1U1ZNNWJXSXhiMmhaVG5jd2RIUktMMWM0U0dFeWMxWnRRa2xtY1dkTFRrOXZNVmMzVkZKSU1qTXJLM0J0Y3pkMWJXMTZkVnBoZG5rd01WVjBablo0VVdaWGNHNXBaRmhyZUU5aWFtRjZkSGw1T0VkNWJUTk5SMVpvUEM5RVVUNDhTVzUyWlhKelpWRStlRTFWUldjM1dFRnlNRGxoTjJKVlFqWmxhbFpZWjA0d1ExRktPV2x1V1VsMGMwRlJMekJZVVRob1dGbFJia3R5VUVwWVEydG9jR2RSVmpKNlZtMUdaUzh5TW5WSVdtNXFiakozYjBoVlVUQXJRWHBaUmt0QlRYRldRMjFtYVhKdFRHUTBNa3BEVlcxMWRHUkdUVmhCY2swMGJFTTNiM1JHWTFZeFRIUXpTV2RFZEhnelNFRmFTa3RrVW5NMGNXWklhWGxoZFdGNVprOTBOR2swV21KWVUycFBVa2RvWVVSb05tMXFMM1pGV2taWldra3plVmRVZFRCd1YzRnVLMHB2TmpSSlZXWlphSGg1VVcxYVNqSTFNMWw0YURWb1ZrcFFSMUJEV1hscVYzVlRNMUoxWm1VMVlrSlNXVmhtWkRGbGNUVlBNRVozU1dVd1lYUkhlR3hoUVR3dlNXNTJaWEp6WlZFK1BFUStRVUZaVkZaSFJXMXpNRWxpVGk5dlMyaFJZMnB3V0hoV05GZFRSVVJtYW14dVRreG1iV0Z6UTNaQldVWkNkR3BrTTBJMksydzJTekJIZHpKTFZEQTJlVXg2TW5kdGVTOUZPVFY1YUZsTVoxcDVVVlJNVkVod2NVOTZXbUZrVldNdk1HbEJZMmRJUVZsUVQzZHBUSGQ2YlZsQmJYbEtOVUl4TVVjMmNFWkJValJGVm1kM1NXRndhRkJYVW0xTU1XYzNURk5GWm1sdE9HNHlhMUp1TjNWcE5XSXdTRzlvS3paNWJWcHdSa2RVYm1WRVYyMHplVk5MTUd3eVYxZ3ZkMHhzV1VWa1N6SkRObFkzUlZkR1RqWlRURWxVYlVsNFF6VkRkWEpRVm5SR1lVcGpja1k0ZHpsVlMxTkNNMUYyYm5aYWFFTkRNVFI0U0VSUFdVZExNRVIxUjFOMVJEVXdXbXBhTldsNWFXcFBPRTVMV1dSVU9IbFJZVU5PYnpONWRrMUZLMlpQWjBGek4ya3ZjMnBpTVVoQlpqQnRSVVYwUXpObVpFb3JRVkIwVkVWWlNGaDRWMGxEWWsxTE9UZG5kSGd6U0hsdllXUTJWU3RWYVV0Tk5rRTBibEoyV2xCV1RHSXpaalJ4ZEZOSFNsaElVRVJDTjBSblZVTkxZMWhKVG0wNVYwVkxWbkIyWkhJMFIzUk9MMUZxWTFka1FrMXRiR1JWZVd0dWNHUjJhelJXVUVOeE1EWmtPVUZhUTNoeFVFcEliMVI1Tm1oWGRtRmlhMjlNYkdNM1JXSXhaVEp3YTNaWWNGbDNaVlJRYTNjclRraHpLMHgzVkZwYUszWktLMDlQU210TE5HWTROak5DY2sweFZqTXdXakprWTBWaGNtdDJaV1JJWlZvME9XZzhMMFErUEM5U1UwRkxaWGxXWVd4MVpUND0=",
+    "isactive": true,
+    "cby": "abc_test",
+    "cdate": "2026-04-01T06:59:44.3702321Z",
+    "uby": "abc_test",
+    "udate": "2026-04-01T06:59:44.370236Z"
+  }
+}</pre></td>
+            <td>200</td>
+            <td>200</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC007</td>
+            <td>POST</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>{
+  "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgc4",
+  "inputaeskey": "bvnropszmchbursjplliazpygtzpxosp",
+  "rsakeysize": 4096,
+  "isactive": true
+}</pre></td>
+            <td>200</td>
+            <td>1.041</td>
+            <td><pre>{
+  "responseCode": "000000",
+  "message": "Completed",
+  "data": {
+    "id": "019d47d7-4c80-728d-bd31-4798b73fc76e",
+    "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgc4",
+    "description": null,
+    "encryptedaeskey": "bTl5CVq2pqZHtSg+8aW/g2Wb2lP7TnQG87mVW4UShSVWUsT0JBX6LdxpeoMJgzpZIF/Qs8fdZQyTGrl70/krEtwOuREtrJGn73gjDPIdDQ7VfQYph9aA30nk+252Ycg1NhhtAkrPzbqX9jCt+EbRjMzn/5MHisc26OeBjIkqAjIa1tHcPrNMz84Y2HQjnmlaZEi81TAze3Iobb1MOEoKGVqYshgvpGepnVpaVY7Y9h8PrbHW0zLCaPlcGXtyVhSYsK0lHN/ZxctKdzAg50LWhCeu/7oUd2p8FfdKgESZU5VsH/qtm4nB2AdFb/ltxbKo9yUDBimrEGskAxYFUUcK6QkQTKgkkLqzLZwInQSKGeBLhsWskVMafHtkQ0X95in9qA+9iftyW+tPuyYs5DlPZ8CebbhVGdmKCbs+c0SHQwYQarfgDcJglBgSy78wVMAGvLVmZmgllcCBqOuiWIxPiiusEdvm38QW7B0lc/6lVOqcuCuGJvhlzwUnFYIAQkXwX2RgBe8D4I7j8ymKavxn6b2pWzzZFb2O/jdvz6DOpMDjklP/zSF0vnIsGXK209qiC1VvzG3fswzBzYuQ2cuXy0XOYpcbIM3s9mDQ6SsDUFUt5IhOvJ/aI4oLt0lrzbAKKMFpjyy2dw6MnvXTGRlrlDXnw305Scjqr8XqAJUgXlQ=",
+    "rsakeysize": 4096,
+    "rsaprivatekey": "UEZKVFFVdGxlVlpoYkhWbFBqeE5iMlIxYkhWelBuUmFiMjgxZVdaRVIweFZOekZuVUdSV05uUlZla1l5YkVVeVlVSlBTakZxZVdWeFRtTklXSEZQSzI5bWVrcEdkRVJvYm1Wd2VYcFBZV05RVERWak1ua3JTbWRPYXpWNE5ITm1RaTkwZDJWdlpGSlpURVZOTUVGdE1WRkJlV05vV1VWRE5uSTRXVGhWTVUxTGFYSmxibUo2VFdVM1pWbHBVSEU0YXpFM2R6VkJZMVZGYnpjdmNrOU1XWHBCTTI1b2NqaGhVRWh2ZWxnNFZuaEVVVTVqVG5wTVkxRjVkWEZpUTFCRGVDOUZXbXh4UzNvdk1tMXhZakpQVm5SRmNXTmFibEJMU1ZKclExZENXalJGSzNFNVpHcFZaVU5vZVRKMFVYRnNNVUo0Y1ZoS1VIZEhZWEZqZEdSdVRVczFjQzlRVVZWb2FXRlFTM2RGV1ZOeGRISkZhMDR4VFhZdlNGbDBibTVDU1RSUVMxcHpUR2RrVTJOMWRsb3pRbTUwYzNsSE5tMVJTMmhKVjFWd2FqZHJVV2xJVEZKdmJpOVJlRlIxUjB4bFJWRmlVMEozWVZNeFQwRldVVUkwVDBweU1qTm5ZamxIWVcxT0wyOTBkVEp4ZWtOWmVFRmhOVUlyU3pGWFYyeHplVFZuTmpKRU9VaEZPV1JyUlRCWmF6RnJiMm8zYTBGNmJXbG1RV0k0Y0ZWV1dUSm1PVU5XYmpSWVVYZ3JiRGhOVmtKeVVrSjRiVXRaTXpKUWJYWmxSRmh2UVVSVFdFTk9SVUp6YjA5MlMxVjVkREpvWlZsUFdFWXJSbk50S3pnMGJGWTJjM05oVUdONmJEVmlWakJNVVdObGRuSm1Zbk5TTlhGbFdFcEVXVE50VFRGdGFHYzJNamhuTTNwQ1ZFTnliakpuVVZabGNFeFBTa1l2UTFaRU9HRXdiVkp4U1ZCRFRYZHNjbGxMY0RKclRWRjBOMHhqU1dKcFJFUlBkbElyVW1OQ1pHZHpWekpLYjFRck1tNHpVMWxMWW10dmMwSmpXVkUyUTBwc2VtNTBXR2huUnpGekwwSTFWVFozUjNJelUydHFOV3hRTmpOU1NtcEdVVk5VWkd0NmVVSXlhR2t5VEM5eVRXMVRZVlJwVFVzM2NqRmtTV2s0YlZKVk5HRXdOMjV0YVdWWU9TOUlNVkZzY21FNFRIQTNRVXgyUTFKNkwybzFWRGhTVnpKalBUd3ZUVzlrZFd4MWN6NDhSWGh3YjI1bGJuUStRVkZCUWp3dlJYaHdiMjVsYm5RK1BGQStLMk4wZGs1VmNua3JSV1ZXYml0RmFHRlBiVGhwVDFGVFNEVXpUMjVDUVVaTVpYZE9NelV5V0V0YVprRXllRFI0ZFdOWWJYTkdhVGg1SzB0SldXaFFXak5JVEZoaWQzTnRhbTF5YkVFd1pqaE5iUzlZVlhRNFkyOXBlblo2U2tWRlVUUnlURlY2V1hSdE9HdFJaakI2UW1SUFpUSXlOMGgwTDBObWFVRnBhVFpOVVd0elNVbDNOQ3N4TDJ4cFRVYzVUaTlrWjJ0TVZVZG9LMUJIYlhaellXeHlNMFowVFRKMVpFUTNLMUYyTkVkNWVIaHZXbVZYTjJnMlF6QkVhRkJqVW5VMFRFbE1ieXRDWmt0S0swTnJiRkpPY1VsUGFsUklNa3RKZG5CTk0yOVdVakI2UkhGa1VrbHhkRmwwT0ZZMlFVUlBVRUpVU0doWU1HdzBTa2xxVXpKSFlYZG5SRm95WTJST1QxWkdSbWt6SzJSd09XVmpZeTlaV1dwRFdVVkhhazh6UkRNeFRXVldSMjFMZWpabE1tSmlRbk5JU1RReVpXaEZXREZ1WlU1S2MwMDRPREJ4Y0VVMWNFUnVMMlphWTBWSFdIVlJQVDA4TDFBK1BGRStkV2d3VDJGRU1FWndTU3RzSzFjMVlUUndNUzlTZGxGV2VWSnhkV3RIZFhOTWVESm5LMHAwUW5SSU1qVTBSalpDWTJoUmFYVXhVazB6YW5GNmNrZGlSMFI1YldONlNFOVZWR1JTV201YWNEUm9PVVpJU25FNGRFcFFhVkkxUkRJNFRUaEtRV3R5UTJSa1FVOVpSbFpFWjFSRVVEZElVMEpJV0RKNlNIcEdjWEZHT1ZOa05GRnpSVlpCWm5wdVdFNUJVSFpxVFhWWFJsTk1ZMnAyWVZsSFVFOVZibUZUZW14Q1NtVmlNamxaWjA4MVVGWllTbFZqU2tZMVUwSnNlR2xSZEU1d2RWbHNaV2hzYTJkdk5XVkxVMnhPSzAxVU4yTlplRTlpVkUxMldUYzRSVkYxY0V4SlMzZG9jVzFTTjJSa1pVVjNia1EzYVdONVRYcENRbFp0Vm1sVlFrTlRlakJ0VUZsSWVVVnFiVzh6TTJSdGNFYzNhMnd3VEd0eFUwNWpWSFozVVZkcGQyUTBhMk4wVDJKaVRsSklZMjR5YjFBMmVVZzRkMmxZWjJvd09UZHpiVEJIUTJwQ2VXcFNUVGd2YzNsWVkwaDNQVDA4TDFFK1BFUlFQbFZLVGtOeFFtOXdSR1JXY0dWck1GRnFaSEl6Y1dWRFNIbENUVXhXYlZGRmFEWXJhRTluVTBobmFUaHNWVzlyUnpKVWJuaEZLMnhNTTFOcFVtWmlSMUpyVURaeFdqTk9aRmRKY3padVJHaFpURnA2VDBKRWJHSTNlVkV6Y0daRlVsRjNaeXRXWmxWbUsxTlNLMWxrU0Uxb1dERktRM042TWxNeVVrTkVlR2M0Um5nd2VWVnlNVzlzUVRFeU5sRnZNV3Q0ZDBVeGFXcFBiRzQzZFhwWll6WkxSek5IYmtjdlRWZHJjMGhyVjNsSWJraFVjR0ZDVlZkNlRWVldlalJUZDJoWFF6ZDZhVGRHVjNZelJtRXpjelpRYkN0UWJXUmlNSEl2YVVKRVpGRjBiMWRpZERGVlp6ZGlPR1E1YzNGdVRXeE5kMDB3YTNkdmRYRm1hMVJWVTJ4WWNFTm9WbTV2TmpoeVUwdHBPRUpGSzBwNVdraFhNRlJsVDFGUU5GUjZlR012ZDNWT2NHVkdURkV4ZFdKV1ZsbEVNRWhrV0dOcGVEUmxXWEJ1YkVOeFFURnlka05xZFVoR2JpdHZWMHN5UjFGcFQyMVpVVDA5UEM5RVVENDhSRkUrYzJSVmFuVkJlR1YzVUVGV1YyNUlUVElyTkRjclNFMTNRV1J1UWpWUVRrNU5hbEIzV2t4M1RrY3dXbkV2YlRKMU5rYzRMMEpLYnpOWVRIcG5aelpKYzBzM04wdFBWREZUTDNNNGFERm5jMDFyYkVsM01URkVXa3BTVG5saE5VWnNja1p6TTFWcVREWk5RMnhwTDNwTmNFeDNZMWxOWVhSMlNqQnZUVEl3U0dsa2VWUk5kVzlVU2xoUVdFRklUR3hOVFZJclVXeHhNMk5XVXpGRVVHZ3ZlVEV6TW5VelQxQllWVlF3VVhsdGJEUlBaVkZJYjJaSWRsTlNNalJsWTFOaFQwbFVhWEJ2YzNaT2FXRTNSbGhZWVUwdlFYRTFUbmxEUTFaeE5XZFdPWGQ0Umt0U09IZE1RV0owYjBJcmJFeEhUMFJWYW5WamVtWXljWEI1TkZGaVNtTk1lall5TWs5U2FqUkpSRFpPUVRWblZsWlpkVlpRVVdwdmRqTmhNMjlFVFU5R0wxTnViMUJFTDBOTk1GUklVR294VkM5MWNtTlVVVTVNZG1OT2RHWXJTV3gzYzJGVU1UbGhWa1JwU0UxNldGb3lWMXAzUFQwOEwwUlJQanhKYm5abGNuTmxVVDVLVlU5V2NISkdhRlJ4Y3pWaU1uTktNazB5WW1wSWJtUTNTMUJaUWxGMlZqZG9XRkpUY0VFeVVubFZaRXBvVVVKd1ptMUthMHRSYlROSk9Fd3ZNRlZQTnpnMWFFc3pZaXRGV25GUE0wTTNibk5EZDJaa1VXTnRXSEJtYm1Sd01DdFlMMFZhV0dadk0zcFZVakpUVlRsSmFrNTNNV0ZsZFZORU1XSkRVVlp0V21FeGRVWlNUREl6VkZGNloyRnNSMFIxT1ZoR1dHeHVRWE5PTVc5M0wyVlRXVkpMVmtkM0sycGxOVFJvTWprNGJGWjFRbG94UWxKSU1saE1URFpTZGxKTVIwZG1ORWhCUVdJeU5UTjNVMEpFUmpOYVJFMXlaMjl6YjFVM1dVUjZjR1JEY21Ka05uaDBlVGhaTHpGSWFuSmFhSE5pYjA1cVZrdzVjMlJ0YjJVMVdGaGlNbTVQVjBNemFtSkVXVEJtVlZGRlRFMDNPVU5CU0hCUldUQXpTa1JoZUhoNmQyNXNORVpEVUROc1lrdEdPVXMzYTNsYVdVbG1UMWgwWlZSb09YWnVMMGgyV1hKSE1pc3ZXa1F3YnpkRllpdDJWM2M5UFR3dlNXNTJaWEp6WlZFK1BFUStSVzl5UldaWFIyRmpibGhwZGpaWVUxaHJZWGR0Ums1Q1lsSnpjM1V6Tm1Ga2VqTmlTbWt6Y2pscFZXZEVVU3RYVEc1bWJYVXpVVUZQVmpGVUwzTnNSR0ZyTWtGTFZpdDZSbEozUlhSclpubFpPRFJXTkVObVIxWmFWemh3VGpKMldFTjFabmM0UkVSMFJIVlNValpsVjIxVVExWnFSVWR6ZUdKSU9Fd3dXSEIyTkdGVVMzWnRWbEJ4U21RclVHdGljMGRpTUVaak5raDZjek0xVEVaM2FEaFFlbFV6ZVdwNWMxSnJjaXRxZVV4VmFFbHpWMFJ6VHpkbGJFeE9MMmcxYUhZdldGRnFkMHRISzNKbE0zTllWbkp6UkRoV1FuaElaSEpYYURWNWJqZFJPVTFwYlhjMldVcHpOMlJFVUVOQmFIcHNZVEpxU1VsSGJrY3diazlCZVhGT1ZWSllZemxxYVRGU2VUWkpTbTVxYTFkVFNHZHFSbnBGY21KalkzaFRWa3BuYm05d1ZFWkxlR05QZDBwbVZXNXlOV3hNZUZreVV6UXpjekIxSzJGbGNYRXhRMkkyZEcxSGQxWTNhV3Q2TVZnM04yNXdVVXhOZEZjeFpsaDFjMXByYW1KUEsxVlFhakE0T1hCV1UxSklPRXhzT0M5blIwRm9MMGhGYWpoMmNERkZWMEUwTWxsWFdXaGxiV2d4ZG1SbFZVdG1ZMFp6TjBsdVYxaFZkVWRFY0c0emVqUTBTV04xU1dZeVRtZFJNMDloYkZCUlExWnlaMGhXT1d0MGNEbG5ZMUJhWms4eFZUVmllRlUzSzI5NVIxVlVXWEp4V0Vkc1NYZDBWRFZaWjJGamJYTjBkVVU0WjFocWJEZzNPSGh0TVRKcFluRnJlVXRrYldSb1kxbERVbUpMZUd4eFZ6ZGpVeXRUUTNjeFdFaGlWMkoyY0VaRmNFZHRVVXRrUm5oM0szSnVjRFF5ZDI5RlREZFZhM2MzTTFCelkydGhlWFExTUUxNGJDdFVSRTFOVHpCRGNrRjNlVWxIU2s5VFRDczBiVEpXUW5waFlrcFdjakpaYlZwWVoya3ZkVVJ2TW00eVYyaFhSVzFXY21SQ0syRmhlRFUxTkdsd1NtWldMek5UTURKRGIwZzRZMHhvV0c5dFpYTkpjbTFMYkhZM1dHNVZTak5zYzNaUWRqUXhaVUZrYzJKUVNHczlQQzlFUGp3dlVsTkJTMlY1Vm1Gc2RXVSs=",
+    "isactive": true,
+    "cby": "abc_test",
+    "cdate": "2026-04-01T06:59:45.4098306Z",
+    "uby": "abc_test",
+    "udate": "2026-04-01T06:59:45.4098437Z"
+  }
+}</pre></td>
+            <td>200</td>
+            <td>200</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC008</td>
+            <td>POST</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>{
+  "name": "",
+  "inputaeskey": "bvnropszmchbursjplliazpygtzpxosp",
+  "rsakeysize": 1024,
+  "isactive": true
+}</pre></td>
+            <td>400</td>
+            <td>0.122</td>
+            <td><pre>{
+  "responseCode": 400,
+  "message": "The name field is required."
+}</pre></td>
+            <td>400</td>
+            <td>400</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: #ffcccc;">
+            <td>TC009</td>
+            <td>POST</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>{
+  "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgcbX",
+  "inputaeskey": "bvnropszmchbursjplliazpygtzpxosp",
+  "rsakeysize": 1024,
+  "isactive": true
+}</pre></td>
+            <td>500</td>
+            <td>0.17</td>
+            <td><pre>{
+  "responseCode": "999999",
+  "message": "22001: value too long for type character varying(100)"
+}</pre></td>
+            <td>400</td>
+            <td>500</td>
+            <td>❌ Fail</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC010</td>
+            <td>POST</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>{
+  "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgcb",
+  "inputaeskey": "",
+  "rsakeysize": 1024,
+  "isactive": true
+}</pre></td>
+            <td>400</td>
+            <td>0.618</td>
+            <td><pre>{
+  "responseCode": 400,
+  "message": "The inputaeskey field is required."
+}</pre></td>
+            <td>400</td>
+            <td>400</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC011</td>
+            <td>POST</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>{
+  "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgcb",
+  "inputaeskey": "cafembgrpewokyg",
+  "rsakeysize": 1024,
+  "isactive": true
+}</pre></td>
+            <td>400</td>
+            <td>0.123</td>
+            <td><pre>{
+  "responseCode": "999999",
+  "message": "inputaeskey must be between 16 and 32 characters"
+}</pre></td>
+            <td>400</td>
+            <td>400</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC012</td>
+            <td>POST</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>{
+  "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgcb",
+  "inputaeskey": "twkavtwypmniubxkeetrpgvqumcxstyzk",
+  "rsakeysize": 1024,
+  "isactive": true
+}</pre></td>
+            <td>400</td>
+            <td>0.145</td>
+            <td><pre>{
+  "responseCode": "999999",
+  "message": "inputaeskey must be between 16 and 32 characters"
+}</pre></td>
+            <td>400</td>
+            <td>400</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+        <tr style="background-color: ;">
+            <td>TC013</td>
+            <td>POST</td>
+            <td>https://uat-api.sooksanonline.com/mad/api/systemsetting/security/v1/aes</td>
+            <td><pre>{
+  "Accept": "text/plain",
+  "Accept-Encoding": "gzip, deflate, br",
+  "Content-Type": "application/json",
+  "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVUHViMHlLVUt5Wk1fSzBYZXQyWGlPUHB2T250aWZXSGIyRy1zeUtNTVE4In0.eyJleHAiOjE3NzUwMjcwODEsImlhdCI6MTc3NTAyNjc4MSwianRpIjoib25ydHJvOmQ2ZWFkYzMzLTdmMTYtNmM2NC05NDhlLTdkNzI3N2E4MWFhOCIsImlzcyI6Imh0dHBzOi8vdWF0LWF1dGguc29va3Nhbm9ubGluZS5jb20vcmVhbG1zL21hZCIsImF1ZCI6WyJtYWQtc3lzdGVtLXNldHRpbmciLCJjZXBoLXJndy1jbGllbnQiLCJhY2NvdW50Il0sInN1YiI6IjRjZDUzODcyLWRjNTQtNDdlMi04M2I4LWVhZmJkNTgzNmFkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1hZC1zeXN0ZW0tc2V0dGluZyIsInNpZCI6ImVhYmQzZTczLTYxZTEtMGE1Ni0xYjJkLWZjMDY2YTBiMGU4ZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly91YXQtbWFkLnNvb2tzYW5vbmxpbmUuY29tIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI4OSIsImh0dHBzOi8vdWF0LWFwaS5zb29rc2Fub25saW5lLmNvbSIsIi8qIiwiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbWFkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiY2VwaC1yZ3ctY2xpZW50Ijp7InJvbGVzIjpbImNvbnRyaWJ1dG9yIiwibWFuYWdlciIsImFkbWluIiwib3BlcmF0b3IiXX0sIm1hZC1zeXN0ZW0tc2V0dGluZyI6eyJyb2xlcyI6WyJKV1RUb2tlbjpDcmVhdGUiLCJKV1RTRUNSRVQ6R2V0IiwiSldUU0VDUkVUOkRlbGV0ZSIsIkpXVFRva2VuOkxpc3RBbGwiLCJBRVM6Q3JlYXRlIiwiQUVTOkdldCIsIkFFUzpMaXN0TmFtZXMiLCJKV1RTRUNSRVQ6VXBkYXRlIiwiSldUVG9rZW46R2V0IiwiSldUVG9rZW46TGlzdE5hbWVzIiwiSldUU0VDUkVUOkxpc3ROYW1lcyIsIkpXVFRva2VuOlVwZGF0ZSIsIkFFUzpVcGRhdGUiLCJKV1RUb2tlbjpEZWxldGUiLCJKV1RTRUNSRVQ6Q3JlYXRlIiwiQUVTOkRlbGV0ZSIsIkpXVFNFQ1JFVDpMaXN0QWxsIiwiQUVTOkxpc3RBbGwiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBvcmdhbml6YXRpb24gZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm9yZ2FuaXphdGlvbiI6WyJoaXRhY2hpLWNoLmNvLnRoIl0sIm5hbWUiOiJhYmMgZGVmIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWJjX3Rlc3QiLCJnaXZlbl9uYW1lIjoiYWJjIiwiZmFtaWx5X25hbWUiOiJkZWYiLCJlbWFpbCI6ImFiY190ZXN0QGVtYWlsLmNvbSJ9.u6cuxIiYkqDigzTKVkyDeRhNZm3ymbJGYULcYxzwxinLVixxFFODUAvLKdl3rOBIgvO3EszhDwYT3PFJhT6LdcjS8Vrj5sTDDAQwYbNRMlzBeBUD6WAmKWiGEgDk7G7N7DhtREkYKhrhSBrQcUsKs7wldgPno9IV7fcYHYgHd4ps0ZC1I8ADbMVulydlQkJh1aIozwQKIXCzKTjNyrNrnGwxiQtsRCEp8m1RBqS6A976VK93PiDJXFtCKRjpmIhyJERkP-lvlvsqVDAvBfDUshb85Xo8nz7mOINoFPhkW9CmaKGlYAvHutZt0v0u2HHov7DVHy5fKs5uG39u2hGiFA"
+}</pre></td>
+            <td><pre>{
+  "name": "eddfazlurkgqprivxjfuiwhivdhbwagjkdnoaicbxkxjkheahyunmhqsglqgonaepqstgmcvtjtvmeqhrsxgbgdykwycozlbwgcb",
+  "inputaeskey": "bvnropszmchbursjplliazpygtzpxosp",
+  "rsakeysize": "",
+  "isactive": true
+}</pre></td>
+            <td>400</td>
+            <td>0.111</td>
+            <td><pre>{
+  "responseCode": 400,
+  "message": "Error converting value {null} to type 'System.Int32'. Path 'rsakeysize', line 1, position 180."
+}</pre></td>
+            <td>400</td>
+            <td>400</td>
+            <td>✅ Pass</td>
+        </tr>
+        
+            </table>
+        </body>
+    </html>
+    

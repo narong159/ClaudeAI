@@ -2,7 +2,7 @@ import requests
 import urllib3
 import sys
 import os
-sys.path.append ("D:/ClaudeAI/learing_with_AI")
+sys.path.append ("D:/ClaudeAI/learning_with_AI")
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -29,6 +29,7 @@ def login_keycloak():
         case_id = "TC001",
         method = "POST",
         url = f"{BASE_URL}/post",
+        request_header = headers,
         request_body = body,
         status_code = response.status_code,
         response_time = response.elapsed.total_seconds(),
